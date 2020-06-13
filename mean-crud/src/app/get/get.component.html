@@ -1,0 +1,37 @@
+<!-- <table class="table table-hover">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone Number</td>
+            <td colspan="2">Actions</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone_number }}</td>
+            <td><a [routerLink]="['edit', user._id]" class="btn btn-primary">Edit</a></td>
+            <td><a (click)="deleteUser(user._id)" class="btn btn-danger">Delete</a></td>
+        </tr>
+    </tbody>
+</table> -->
+<h2>Berita </h2>
+<hr>
+<div class="pt-3 row pt-3-hover">
+    <div class="col-md-6 col-sm-12">
+        <div class="row">
+            <div class="col-sm-4 col-md-4" *ngFor="let news of nw">
+                <h1>{{ news.title }}</h1>
+                <p>{{ news.content }}</p>
+                <span>{{ news.phone_number }}</span>
+                <br>
+                <a [routerLink]="['edit', news._id]" class="btn btn-primary">Edit</a>
+                <a (click)="deleteNews(news._id)" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br>
